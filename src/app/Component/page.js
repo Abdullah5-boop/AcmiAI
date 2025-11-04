@@ -30,8 +30,8 @@ export default function Page() {
 
       <SearchBar setFetchdata={setFetchdata} />
 
-      <section className='w-[80%] mx-auto'>
-        <div className="grid grid-cols-2 gap-4">
+      <section className='w-full lg:w-[80%]  lg:mx-auto'>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {fetchData.length > 0 ? (
             fetchData.map((customer, index) => (
               <Cart

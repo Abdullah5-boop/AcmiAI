@@ -32,7 +32,7 @@ export default function SearchBar({ setFetchdata }) {
 
   return (
     <div>
-      <form className="w-[50%] mx-auto" onSubmit={handleSubmit}>
+      <form className="w-full lg:w-[50%] mx-auto" onSubmit={handleSubmit}>
         <label
           htmlFor="default-search"
           className="mb-2 text-sm font-medium text-gray-900 sr-only"

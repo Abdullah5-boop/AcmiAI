@@ -5,7 +5,7 @@ import Img from "../../../../public/paper.png"
 export default function Cart({ customer, setViewId }) {
 
   return (
-    <div className="w-[80%] p-4 border border-gray-200 rounded-lg shadow-sm sm:p-8  ">
+    <div className="w-full lg:w-[80%] p-4 border border-gray-200 rounded-lg shadow-sm sm:p-8  ">
       <div>
         <ul role="list" className="divide-y divide-gray-200 text-black dark:divide-gray-700">
           <li className="py-3 sm:py-4">
