@@ -10,7 +10,7 @@ export default function View({ fetchViewData }) {
         <div className='mb-5'>
           {
             fetchViewData?.tags.map((tag, index) =>
-              <span href="#" className="bg-blue-200 hover:bg-blue-300 py-1 px-2 rounded-lg text-sm mr-5">{tag}</span>)
+              <span key={index} className="bg-blue-200 hover:bg-blue-300 py-1 px-2 rounded-lg text-sm mr-5">{tag}</span>)
           }
         </div>
         <p className='text-gray-700 mb-6 text-xl lg:text-2xl '>{fetchViewData?.content}</p>

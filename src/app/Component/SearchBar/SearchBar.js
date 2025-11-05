@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 export default function SearchBar({ setFetchdata }) {
   const [query, setQuery] = useState(""); // store input value
+  const [isNumberOnly, setIsNumberOnly] = useState(false);
   console.log(query);
 
   function fetchData() {
@@ -24,7 +25,13 @@ export default function SearchBar({ setFetchdata }) {
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      fetchData();
+      const onlyDigits = /^\d+$/.test(query);
+      setIsNumberOnly(onlyDigits);
+
+      if (!onlyDigits) {
+        fetchData()
+      }
+
     }, 2000);
 
     return () => clearTimeout(timeoutId); // cleanup
@@ -73,6 +80,14 @@ export default function SearchBar({ setFetchdata }) {
           </button>
         </div>
       </form>
+
+      {
+        isNumberOnly &&
+        <p className="text-red-500 text-center mt-2">
+          Only number is not allowed!
+        </p>
+      }
+
     </div>
   );
 }

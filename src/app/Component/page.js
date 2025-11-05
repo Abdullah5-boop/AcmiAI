@@ -49,11 +49,9 @@ export default function Page() {
       </section>
 
       <section >
-        {fetchViewData ? (
-          <View fetchViewData={fetchViewData} />
-        ) : (
-          ""
-        )}
+        {
+          fetchViewData ? <View  fetchViewData={fetchViewData} /> : ""
+        }
       </section>
       <Footer></Footer>
     </div>
